@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	}
 	
 	unsigned long int UserInput;
-	printf("Size of \"unsigned long int\"in bytes: %lu bytes\n", sizeof(UserInput));
+	printf("Size of \"int\" in bytes: %lu bytes\n", sizeof(UserInput));
 			
 	//Get the user specified range
 	printf("Enter the integer index\nto find prime numbers to: ");
@@ -40,7 +40,7 @@ void FindPrimes(unsigned long int PrimeRange,int CMDFlag)
 	char SeeList;
 	//Check if there is available memory to find the primes.
 	printf("Allocating %lu bytes of memory...\n", PrimeRange*sizeof(int));
-	unsigned long int *NumberList = (unsigned long int*) malloc((PrimeRange)*sizeof(unsigned long int));		
+	int *NumberList = (int*) malloc((PrimeRange)*sizeof(int));		 
 
 	if(NumberList == NULL)
 	{
